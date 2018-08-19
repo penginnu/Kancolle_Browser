@@ -1,0 +1,19 @@
+{
+  "name": "kancolle_browser",
+  "version": "2.1.0",
+  "description": "艦これ専用ブラウザ「提督の執務室」",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penginnu/Kancolle_Browser.git"
+  },
+  "author": "pengin.nu",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/penginnu/Kancolle_Browser/issues"
+  },
+  "homepage": "https://github.com/penginnu/Kancolle_Browser#readme"
+}
