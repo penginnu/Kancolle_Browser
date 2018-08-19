@@ -47,11 +47,13 @@ Copyrigt &copy; 2018 pengin.nu. All Rights Reserved.
 **Electron**
 
 > MIT License
+>
 > Copyright (c) 2013-2018 GitHub Inc. All rights reserved.
 
 **Electron-packager**
 
 > BSD 2-Clause "Simplified" License
+>
 > Copyright (c) 2015 Max Ogden and other contributors. All rights reserved.
 
 **electron-json-storage**
