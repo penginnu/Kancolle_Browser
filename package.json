@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/penginnu/Kancolle_Browser/issues"
   },
-  "homepage": "https://github.com/penginnu/Kancolle_Browser#readme"
+  "homepage": "https://github.com/penginnu/Kancolle_Browser#readme",
+  "dependencies": {
+    "electron": "^2.0.7",
+    "npm": "^6.4.0"
+  }
 }
