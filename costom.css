@@ -1,0 +1,1 @@
+body { margin:0; overflow:hidden } #game_frame { position:fixed; left:50%; top:-16px; margin-left:-450px; z-index:1 } .area-pickupgame, .area-menu { display:none!important; }
