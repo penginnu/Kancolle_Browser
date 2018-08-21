@@ -40,7 +40,7 @@ function createWindow () {
         console.log("Load Window position (mainWindow)");
         mainWindow.setPosition(settings.mainWindow.position[0], settings.mainWindow.position[1]);
         
-        mainWindow.setContentSize( 1200 * Math.round( settings.zoomMode / 100 ) , 720 * Math.round( settings.zoomMode / 100) );
+        mainWindow.setContentSize( 1200 * ( settings.zoomMode / 100 ) , 720 * ( settings.zoomMode / 100) );
         mainWindow.webContents.setZoomFactor( settings.zoomMode / 100 );
     } else {
         settings.mainWindow.position[0] = 0;
@@ -114,10 +114,17 @@ function createWindow () {
 }
 
 function createSetingWindow () {
-    settingWindow = new BrowserWindow({width: 500, height: 300});
+    settingWindow = new BrowserWindow({width: 575, height: 400, show: false, title: "提督の執務室"});
     settingWindow.setMenu(null);
 
     settingWindow.loadFile('src/config/config.html');
+
+    console.log("settingWindow READY");
+
+    settingWindow.on('close', (event) => {
+        event.preventDefault();
+        settingWindow.hide();
+    });
 } 
 
 function createToolWindow () {
@@ -189,6 +196,7 @@ function systemStart() {
         //起動
         createWindow();
         createToolWindow();
+        createSetingWindow();
     });
 }
 
@@ -252,7 +260,7 @@ ipc.on('Change-ZoomFactor', function(event, arg) {
         settings.zoomMode = 75;
     }
 
-    mainWindow.setContentSize( 1200 * Math.round( settings.zoomMode / 100 ) , 720 * Math.round( settings.zoomMode / 100) );
+    mainWindow.setContentSize( 1200 * ( settings.zoomMode / 100 ) , 720 * ( settings.zoomMode / 100) );
     mainWindow.webContents.setZoomFactor( settings.zoomMode / 100 );
 
     console.log('Change-ZoomFactor to ' + settings.zoomMode);
@@ -263,16 +271,10 @@ ipc.on('Change-ZoomFactor', function(event, arg) {
 
 ipc.on('Screen-Shot', function(event, arg) {
     console.log('Screen Shot by ipc to ' + settings.zoomMode);
-
-    // if (settings.zoomMode === 50) {
-    //     console.log('50');
-    //     event.sender.send('Screen-Shot-reply', '50');
-    // } else if (settings.zoomMode === 75) {
-    //     console.log('75');
-    //     event.sender.send('Screen-Shot-reply', '75');
-    // } else if (settings.zoomMode === 100) {
-    //     event.sender.send('Screen-Shot-reply', '100');
-    // }
-
     event.sender.send('Screen-Shot-reply', settings.zoomMode );
+});
+
+ipc.on('Open-Setting', function(event, arg) {
+    settingWindow.show();
+    event.sender.send('Open-Setting-reply', "OK" );
 });

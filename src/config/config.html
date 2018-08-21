@@ -4,19 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="./config.css">
-    <script type="text/javascript">
-        console.log("Setting window ready.");
-    </script>
+    <link rel="stylesheet" href="../fonts/fa/css/all.min.css">
+    <script src="./config.js"></script>
 </head>
 <body>
-    設定メニュー
-    <section>
-        <h1>このソフトウェアについて</h1>
-        バージョン：v2.0.0<br>
-        BSD 3-Clause License<br>
-        Copyright (c) 2018, pengin.nu<br>
-        All rights reserved.<br>
-    </section>
+    <nav id="nav">
+        <ul id="nav">
+            <li class="nav" onclick="ChangeTab('tab1');"><i class="fas fa-3x fa-cog"></i><br><span class="nav-text">基本設定</span></li>
+            <li class="nav" onclick="ChangeTab('tab2');"><i class="fas fa-3x fa-cogs"></i><br><span class="nav-text">高度な設定</span></li>
+            <li class="nav" onclick="ChangeTab('tab3');"><i class="far fa-3x fa-question-circle"></i><br><span class="nav-text">About</span></li>
+        </ul>
+    </nav>
+    <div id="contents"></div>
+        <div class="tabpage" id="tab1">
+            <!-- 基本設定 -->
+            <h1>基本設定</h1>
+            <section>
+                <h2>ブラウザ設定</h2>
+                <h3>キャッシュ設定</h3>
+                <p><button style="width: 100%;">キャッシュを削除して再読み込み</button></p>
+                <p class="info">読み込みに時間がかかる場合があります。</p>
+                <input type="checkbox" name="" id=""><span class="setting-checkbox">終了時に毎回キャッシュを削除する</span>
+                <p class="info">毎度起動時の読み込みに時間がかかる場合があります。</p>
+            </section>
+            <section>
+                <h2>ゲーム設定</h2>
+                <h3>艦これ表示倍率</h3>
+                <p>
+                    <input type="number" min="25" max="250" step="1" required value="100">
+                    <button>適用</button>
+                </p>
+                <p class="info">ツールバーの倍率変更を使用する場合は、下のプリセット設定を変更して下さい。</p>
+                <h3>艦これ表示倍率プリセット</h3>
+                <p>
+                    １：<input type="number" min="25" max="250" step="1" required value="100">
+                    ２：<input type="number" min="25" max="250" step="1" required value="75">
+                    ３：<input type="number" min="25" max="250" step="1" required value="50">
+                    <button>適用</button>
+                </p>
+            </section>
+        </div>
+        <div class="tabpage"  id="tab2">
+            <!-- 高度な設定 -->
+            <h1>高度な設定</h1>
+            <section>
+                
+                <p>
+                    注意：この設定を変更すると、コンピューターに負荷がかかったりアプリケーションの動作が不安定になる場合があります。
+                </p>
+            </section>
+            <section>
+                <h2>ブラウザ設定</h2>
+                <p>
+                    <input type="checkbox" name="" id=""><span class="setting-checkbox">ハードウエアアクセラレーションを無効にする</span>
+                </p>
+            </section>
+        </div>
+        <div class="tabpage" id="tab3">
+            <h1>バージョン情報</h1>
+            <section>
+                <p>
+                    Version 2.1.0
+                </p>
+            </section>
+            <h1>ライセンス</h1>
+            <section>
+                <p>
+                    Free BSD 3-Clause<br>
+                    Copyrigt © 2018 pengin.nu. All Rights Reserved.
+                </p>
+                <h2>使用ライブラリ</h2>
+                <h3>Electron</h3>
+                <p class="library">
+                    MIT License<br>
+                    Copyright (c) 2013-2018 GitHub Inc. All rights reserved.
+                </p>
+                <h3>Electron-packager</h3>
+                <p class="library">
+                    BSD 2-Clause "Simplified" License<br>
+                    Copyright (c) 2015 Max Ogden and other contributors. All rights reserved.
+                </p>
+                <h3>electron-json-storage</h3>
+                <p class="library">
+                    MIT License
+                </p>
+                <h3>normalize.css</h3>
+                <p class="library">
+                    MIT License
+                </p>
+            </section>
+        </div>
+    </div>
 </body>
 </html>

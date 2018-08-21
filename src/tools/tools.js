@@ -46,6 +46,17 @@ function disableMute () {
     return 0;
 }
 
+//設定
+function openSettings () {
+    console.log("Open-Setting");
+    ipc.on('Open-Setting-reply', function(responce) {
+        console.log("Open-Setting Responce : " + responce);
+    });
+    ipc.send('Open-Setting', 'OPEN_SETTING');
+
+    return 0;
+}
+
 function getCurrentTime() {
 	var now = new Date();
 	var res = "KanColle-" + now.getFullYear() +padZero(now.getMonth() + 1) + 
@@ -133,17 +144,6 @@ function changeZoomFactor () {
         console.log("Change Zoom Factor : " + responce);
     });
     ipc.send('Change-ZoomFactor', 'CHANGE-ZOOMFACTOR');
-
-    return 0;
-}
-
-// 設定画面送信
-function openSettings () {
-    console.log("Open Settings Window");
-    ipc.on('Open-Settings', function(responce) {
-        console.log("Open Settings Window : " + responce);
-    });
-    ipc.send('Open-Settings', 'OPEN-SETTINGS');
 
     return 0;
 }
