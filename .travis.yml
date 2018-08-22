@@ -1,1 +1,2 @@
 language: JavaScript
+sudo: enabled
