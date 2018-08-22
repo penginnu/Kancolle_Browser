@@ -1,5 +1,7 @@
 # 艦これ専用ブラウザ 提督の執務室
 
+[![Build Status](https://travis-ci.org/penginnu/Kancolle_Browser.svg?branch=master)](https://travis-ci.org/penginnu/Kancolle_Browser)
+
 > スクリーンショット貼っておこう。
 
 ## このソフトは？
