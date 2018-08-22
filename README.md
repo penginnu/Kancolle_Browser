@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/penginnu/Kancolle_Browser.svg?branch=master)](https://travis-ci.org/penginnu/Kancolle_Browser)
 
-> スクリーンショット貼っておこう。
+![default](https://user-images.githubusercontent.com/37444014/44470434-a9c4fd80-a664-11e8-8c5b-2edec606c924.PNG)
 
 ## このソフトは？
 

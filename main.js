@@ -68,10 +68,9 @@ function createWindow () {
 
     // ウィンドウが閉じられた時に発火
     mainWindow.on('closed', () => {
+        settingWindow.destroy();
         // 設定群の保存
         storage.set('config.json', settings, function(error) {
-            
-
             // ウインドウオブジェクトの参照を外す。
             // 通常、マルチウインドウをサポートするときは、
             // 配列にウインドウを格納する。

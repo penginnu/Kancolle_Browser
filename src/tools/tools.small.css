@@ -28,11 +28,13 @@ li {
     text-align: center;
     border-radius: 25px;
     -webkit-app-region: no-drag;
+    cursor: default;
 }
 
 li:hover {
-    background-color: #505050;
+    background-color: #808080;
 }
+
 div {
     width: 100%;
     padding: 0 5px;

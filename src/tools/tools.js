@@ -28,6 +28,7 @@ function mute() {
 function activeMute () {
     console.log("Active Mute");
     ipc.on('Active-Mute-reply', function(responce) {
+        document.getElementById('mute').style = "background-color: #808080;";
         console.log("Active-Mute Responce : " + responce);
     });
     ipc.send('Active-Mute', 'ACTIVE_MUTE');
@@ -39,6 +40,7 @@ function activeMute () {
 function disableMute () {
     console.log("Disabled Mute");
     ipc.on('Disabled-Mute-reply', function(responce) {
+        document.getElementById('mute').style = "background-color: #202020;";
         console.log("Disabled-Mute Responce : " + responce);
     });
     ipc.send('Disabled-Mute', 'DISABLED_MUTE');

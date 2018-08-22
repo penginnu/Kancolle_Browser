@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tool bar</title>
     <link rel="stylesheet" href="./tools.small.css">
-    <link rel="stylesheet" href="../fonts/fa/css/all.css">
     <script src="./tools.js"></script>
+    <script src="../fonts/fa/js/all.min.js"></script>
 </head>
 <body>
     <ul>
-        <li onclick="mute()"><i class="fas fa-volume-up"></i></li>
+        <li onclick="mute()" id="mute">
+            <span class="fa-layers fa-fw">
+                <i class="fas fa-volume-up"></i>
+                <span class="fa-layers-text" data-fa-transform="grow-4 down-1" style="font-weight:900">＼</span>
+            </span>
+        </li>
         <li onclick="screenShot()"><i class="fas fa-camera"></i></li>
         <li onclick="changeZoomFactor()"><i class="fas fa-search-plus"></i></li>
         <!-- <li><i class="far fa-window-maximize"></i></li> -->
