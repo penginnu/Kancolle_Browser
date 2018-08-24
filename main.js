@@ -266,8 +266,6 @@ ipc.on('Change-ZoomFactor', function(event, arg) {
     event.sender.send('Change-ZoomFactor-reply', 'OK');
 });
 
-
-
 ipc.on('Screen-Shot', function(event, arg) {
     console.log('Screen Shot by ipc to ' + settings.zoomMode);
     event.sender.send('Screen-Shot-reply', settings.zoomMode );
@@ -276,4 +274,11 @@ ipc.on('Screen-Shot', function(event, arg) {
 ipc.on('Open-Setting', function(event, arg) {
     settingWindow.show();
     event.sender.send('Open-Setting-reply', "OK" );
+});
+
+ipc.on('Reload-Cache-Delete', function(event, arg) {
+    console.log("Cache Crear reload");
+    mainWindow.webContents.session.clearCache(() => {
+        mainWindow.webContents.reload();
+    });
 });
