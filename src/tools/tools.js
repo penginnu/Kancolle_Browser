@@ -28,6 +28,7 @@ function mute() {
 function activeMute () {
     console.log("Active Mute");
     ipc.on('Active-Mute-reply', function(responce) {
+        document.getElementById('mute').style = "background-color: #808080;";
         console.log("Active-Mute Responce : " + responce);
     });
     ipc.send('Active-Mute', 'ACTIVE_MUTE');
@@ -39,9 +40,21 @@ function activeMute () {
 function disableMute () {
     console.log("Disabled Mute");
     ipc.on('Disabled-Mute-reply', function(responce) {
+        document.getElementById('mute').style = "background-color: #202020;";
         console.log("Disabled-Mute Responce : " + responce);
     });
     ipc.send('Disabled-Mute', 'DISABLED_MUTE');
+
+    return 0;
+}
+
+//設定
+function openSettings () {
+    console.log("Open-Setting");
+    ipc.on('Open-Setting-reply', function(responce) {
+        console.log("Open-Setting Responce : " + responce);
+    });
+    ipc.send('Open-Setting', 'OPEN_SETTING');
 
     return 0;
 }
@@ -133,17 +146,6 @@ function changeZoomFactor () {
         console.log("Change Zoom Factor : " + responce);
     });
     ipc.send('Change-ZoomFactor', 'CHANGE-ZOOMFACTOR');
-
-    return 0;
-}
-
-// 設定画面送信
-function openSettings () {
-    console.log("Open Settings Window");
-    ipc.on('Open-Settings', function(responce) {
-        console.log("Open Settings Window : " + responce);
-    });
-    ipc.send('Open-Settings', 'OPEN-SETTINGS');
 
     return 0;
 }
