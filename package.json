@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/penginnu/Kancolle_Browser#readme",
   "dependencies": {
-    "electron": "^2.0.7",
-    "electron-json-storage": "^4.1.1",
-    "npm": "^6.4.0"
+    "electron": "^25.2.0",
+    "electron-json-storage": "^4.6.0"
   }
 }
