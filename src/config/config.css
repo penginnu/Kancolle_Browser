@@ -1,0 +1,95 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    background-color: #202020;
+}
+
+body {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 75px;
+    height: 100%;
+    float: left;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li.nav {
+    padding: 0;
+    margin: 0;
+    width: 75px;
+    height: 75px;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+li.nav:hover {
+    color: #ffffff;
+}
+
+span.nav-text {
+    font-size: x-small;
+}
+
+div.tabpage {
+    padding: 0 0 0 5px;
+    margin: 0;
+    width: calc(100% - 75px);
+    box-sizing: border-box;
+    float: left;
+    display: block;
+}
+
+section {
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0.2em 0;
+    color: #ffffff;
+    font-size: x-large;
+}
+
+h2 {
+    font-size: large;
+}
+
+h3 {
+    font-size: medium;
+}
+
+p.library {
+    font-size: small;
+}
+
+div#tab2, div#tab3 {
+    display: none;
+}
+
+p.info {
+    padding: 0 0 0 25px;
+    font-size: small;
+}
+
+span.setting-checkbox {
+    margin: 0 0 0 5px;
+}
